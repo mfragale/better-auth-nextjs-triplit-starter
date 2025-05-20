@@ -31,11 +31,11 @@ NEXT_PUBLIC_TRIPLIT_ANON_TOKEN=$TRIPLIT_ANON_TOKEN
 
 [TanStack Query](https://tanstack.com/query)
 
+[Triplit](https://triplit.dev)
+
 [shadcn/ui](https://ui.shadcn.com)
 
 [TailwindCSS](https://tailwindcss.com)
-
-[Triplit](https://triplit.dev)
 
 [Biome](https://biomejs.dev)
 

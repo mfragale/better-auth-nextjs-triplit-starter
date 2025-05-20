@@ -44,9 +44,6 @@ export function useTriplitAuth() {
             }
 
             try {
-                console.log(
-                    sessionData?.session.token || process.env.NEXT_PUBLIC_TRIPLIT_ANON_TOKEN!
-                )
                 await triplit.startSession(
                     sessionData?.session.token || process.env.NEXT_PUBLIC_TRIPLIT_ANON_TOKEN!
                 )

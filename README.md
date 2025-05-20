@@ -1,9 +1,4 @@
-# Better Auth Next.js Starter (App Router)
-
-[Demo](https://nextjs.better-auth-starter.com)
-
-- [Pages Router](https://github.com/daveyplate/better-auth-nextjs-pages-starter)
-- [TanStack Start](https://github.com/daveyplate/better-auth-tanstack-starter)
+# Better Auth Next.js Triplit Starter (App Router)
 
 ## Installation
 

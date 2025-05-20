@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { ThemeProvider } from "next-themes"
 import type { ReactNode } from "react"
 import { Toaster } from "sonner"
+
 import { useSession } from "@/hooks/auth-hooks"
 import { useTriplitAuth } from "@/hooks/use-triplit-auth"
 import { authClient } from "@/lib/auth-client"

@@ -23,15 +23,18 @@ export function ModeToggle() {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
+
             <DropdownMenuContent align="end" onCloseAutoFocus={(e) => e.preventDefault()}>
                 <DropdownMenuItem onClick={() => setTheme("light")}>
                     <SunIcon />
                     Light
                 </DropdownMenuItem>
+
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
                     <MoonIcon />
                     Dark
                 </DropdownMenuItem>
+
                 <DropdownMenuItem onClick={() => setTheme("system")}>
                     <MonitorIcon />
                     System

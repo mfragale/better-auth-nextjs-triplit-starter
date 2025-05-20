@@ -33,21 +33,17 @@ export const viewport: Viewport = {
     ]
 }
 
-export default function RootLayout({
-    children
-}: Readonly<{
-    children: ReactNode
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} flex min-h-svh flex-col antialiased`}
+            >
                 <RootProviders>
                     <Providers>
-                        <div className="flex min-h-svh flex-col">
-                            <Header />
+                        <Header />
 
-                            {children}
-                        </div>
+                        {children}
                     </Providers>
                 </RootProviders>
             </body>

@@ -7,21 +7,19 @@
 
 ## Installation
 
-First, create a PostgreSQL Database then configure your environment variables.
+First, create a Triplit Database or run triplit dev then configure your environment variables.
 
 You can generate a `BETTER_AUTH_SECRET` [here](https://www.better-auth.com/docs/installation#set-environment-variables).
 
 ```bash
 BETTER_AUTH_SECRET=""
-DATABASE_URL=""
-```
-
-Then generate your schema and perform migrations with drizzle-kit.
-
-```bash
-npx @better-auth/cli generate
-npx drizzle-kit generate
-npx drizzle-kit migrate
+TRIPLIT_DB_URL="http://localhost:6543"
+TRIPLIT_SERVICE_TOKEN=""
+TRIPLIT_ANON_TOKEN=""
+ 
+EXTERNAL_JWT_SECRET=$BETTER_AUTH_SECRET
+NEXT_PUBLIC_TRIPLIT_DB_URL=$TRIPLIT_DB_URL
+NEXT_PUBLIC_TRIPLIT_ANON_TOKEN=$TRIPLIT_ANON_TOKEN
 ```
 
 - Twitter: [@daveycodez](https://x.com/daveycodez)
@@ -42,9 +40,7 @@ npx drizzle-kit migrate
 
 [TailwindCSS](https://tailwindcss.com)
 
-[Drizzle ORM](https://orm.drizzle.team)
-
-[PostgreSQL](https://postgresql.org)
+[Triplit](https://triplit.dev)
 
 [Biome](https://biomejs.dev)
 

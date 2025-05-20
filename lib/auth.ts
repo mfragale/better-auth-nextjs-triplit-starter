@@ -1,14 +1,12 @@
+import { triplitAdapter } from "@daveyplate/better-auth-triplit"
 import { betterAuth } from "better-auth"
-import { drizzleAdapter } from "better-auth/adapters/drizzle"
 
-import { db } from "@/database/db"
-import * as schema from "@/database/schema"
+import { httpClient } from "@/triplit/http-client"
 
 export const auth = betterAuth({
-    database: drizzleAdapter(db, {
-        provider: "pg",
-        usePlural: true,
-        schema
+    database: triplitAdapter({
+        httpClient,
+        debugLogs: false
     }),
     emailAndPassword: {
         enabled: true

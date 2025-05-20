@@ -6,6 +6,7 @@ import "@/styles/globals.css"
 
 import { Header } from "@/components/header"
 import { Providers } from "./providers"
+import { RootProviders } from "./root-providers"
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -40,13 +41,15 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <Providers>
-                    <div className="flex min-h-svh flex-col">
-                        <Header />
+                <RootProviders>
+                    <Providers>
+                        <div className="flex min-h-svh flex-col">
+                            <Header />
 
-                        {children}
-                    </div>
-                </Providers>
+                            {children}
+                        </div>
+                    </Providers>
+                </RootProviders>
             </body>
         </html>
     )

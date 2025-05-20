@@ -3,6 +3,7 @@
 import { useQuery } from "@triplit/react"
 import { Loader2 } from "lucide-react"
 import { type FormEvent, useEffect, useState } from "react"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { triplit } from "@/triplit/client"
@@ -41,7 +42,6 @@ export default function App() {
                 <Input
                     type="text"
                     placeholder="What needs to be done?"
-                    className="todo-input"
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                 />

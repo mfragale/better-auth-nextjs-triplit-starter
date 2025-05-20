@@ -13,7 +13,7 @@ You can generate a `BETTER_AUTH_SECRET` [here](https://www.better-auth.com/docs/
 
 ```bash
 BETTER_AUTH_SECRET=""
-TRIPLIT_DB_URL="http://localhost:6543"
+TRIPLIT_DB_URL=""
 TRIPLIT_SERVICE_TOKEN=""
 TRIPLIT_ANON_TOKEN=""
  

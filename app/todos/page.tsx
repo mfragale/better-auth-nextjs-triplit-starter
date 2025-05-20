@@ -1,6 +1,7 @@
 "use client"
 
 import { useQuery } from "@triplit/react"
+import { Loader2 } from "lucide-react"
 import { type FormEvent, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,13 +10,13 @@ import Todo from "./todo"
 
 function useTodos() {
     const todosQuery = triplit.query("todos").Order("createdAt", "DESC")
-    const { results: todos, error } = useQuery(triplit, todosQuery)
-    return { todos, error }
+    const { results: todos, error, fetching } = useQuery(triplit, todosQuery)
+    return { todos, error, fetching }
 }
 
 export default function App() {
     const [text, setText] = useState("")
-    const { todos } = useTodos()
+    const { todos, fetching } = useTodos()
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault()
@@ -24,7 +25,7 @@ export default function App() {
     }
 
     return (
-        <div className="container mx-auto flex flex-col gap-2 p-4">
+        <div className="container mx-auto flex flex-col gap-4 p-4">
             <form onSubmit={handleSubmit} className="flex gap-2">
                 <Input
                     type="text"
@@ -38,6 +39,8 @@ export default function App() {
                     Add Todo
                 </Button>
             </form>
+
+            {fetching && <Loader2 className="animate-spin" />}
 
             <div>
                 {todos?.map((todo) => (

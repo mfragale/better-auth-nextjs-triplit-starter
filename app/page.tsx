@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { CreateOrganizationButton } from "@/components/create-organization-button"
 
 export default function Home() {
     return (
@@ -22,6 +23,8 @@ export default function Home() {
                     </li>
                     <li>Save and see your changes instantly.</li>
                 </ol>
+
+                <CreateOrganizationButton />
 
                 <div className="flex flex-col items-center gap-4 sm:flex-row">
                     <a
